@@ -13,7 +13,6 @@ import argparse
 
 import ResNet18
 import torchvision.datasets as datasets
-from torchsummary import summary
 from utils import progress_bar
 
 
