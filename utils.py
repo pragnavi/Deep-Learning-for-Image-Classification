@@ -1,7 +1,18 @@
 
 import torch
 import numpy as np
+import random, os
 import matplotlib.pyplot as plt
+
+def seed_everything(seed=1234):
+    
+    random.seed(seed)
+    os.environ['PYTHONHASHSEED'] = str(seed)
+    np.random.seed(seed)
+    torch.manual_seed(seed)
+    torch.cuda.manual_seed(seed)
+    torch.backends.cudnn.deterministic = True
+    torch.backends.cudnn.benchmark = True
 
 # accuracy is the fraction of predictions the model got correct
 def calculate_accuracy(y_pred, y):
