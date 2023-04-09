@@ -4,6 +4,11 @@ import numpy as np
 import random, os
 import matplotlib.pyplot as plt
 
+
+# Sets the seed for numpy and torch to make sure functions with a random component behave deterministically
+# torch.backends.cudnn.deterministic = true sets the CuDNN to deterministic mode.
+# This function allows us to run experiments 100% deterministically.
+# https://gist.github.com/ihoromi4/b681a9088f348942b01711f251e5f964
 def seed_everything(seed=1234):
     
     random.seed(seed)
@@ -30,8 +35,8 @@ def epoch_time(start_time, end_time):
 
 # visualize the loss as the network trained
 def get_loss_plot(train_loss, val_loss):
-    plt.plot(range(len(train_loss),train_loss))
-    plt.plot(range(len(train_loss),val_loss))
+    plt.plot(range(len(train_loss)),train_loss)
+    plt.plot(range(len(train_loss)),val_loss)
     plt.ylabel('Loss')
     plt.xlabel('Epoch')
     plt.title('Loss')

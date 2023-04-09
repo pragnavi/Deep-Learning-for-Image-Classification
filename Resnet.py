@@ -1,6 +1,6 @@
 import torch
 import torch.nn as nn
-import torch.functional as F
+import torch.nn.functional as F
 
 '''ResNet in PyTorch.
 For Pre-activation ResNet, see 'preact_resnet.py'.
@@ -72,5 +72,6 @@ class ResNet(nn.Module):
         out = self.linear(out)
         return out
 
+#ResNet18 has 4 residual layers, each composed of a specifed number of residual blocks
 def ResNet18():
     return ResNet(BasicBlock, [2, 2, 2, 2])
