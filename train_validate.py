@@ -23,8 +23,7 @@ def train(model, iterator, optimizer, criterion, device):
     # Prep model for training
     model.train()
 
-    for i, (x, y) in enumerate(iterator):
-        print(str(i) + ' ' + str(len(iterator)))
+    for (x, y) in iterator:
         # Move inputs and labels to device
         x = x.to(device)
         y = y.to(device)
