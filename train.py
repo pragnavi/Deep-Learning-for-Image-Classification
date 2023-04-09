@@ -8,7 +8,7 @@ from create_dataset import*
 from utils import*
 
 BATCH_SIZE = 64
-EPOCHS = 2
+EPOCHS = 100
 INPUT_SIZE = (3,32,32)
 LEARNING_RATE = 1e-3
 
