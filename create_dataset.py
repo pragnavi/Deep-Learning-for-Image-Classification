@@ -6,6 +6,7 @@ from torchvision import datasets
 from torch.utils.data import random_split
 
 
+
 def get_data_loaders(batch_size, root = '.data', valid_ratio = 0.1):
   
     #means and stds for the 3 channels of the dataset
