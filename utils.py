@@ -41,8 +41,8 @@ def get_loss_plot(train_loss, val_loss):
     plt.xlabel('Epoch')
     plt.title('Loss')
     plt.legend(['Training Loss', 'Validation Loss'])
-    plt.show()
     plt.savefig('loss_plot.png')
+    plt.show()
 
 # Stops training if validation loss does not decrease for a certain number of epochs(patience)
 '''Early Stopping for PyTorch.
